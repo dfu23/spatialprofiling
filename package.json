@@ -1,0 +1,28 @@
+{
+  "name": "spatial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create": "AWS_PROFILE=default AWS_REGION=us-east-1 arc-create",
+    "deploy": "AWS_PROFILE=default AWS_REGION=us-east-1 arc-deploy",
+    "start": "NODE_ENV=testing AWS_PROFILE=default AWS_REGION=us-east-1 nodemon --watch src -e js,css --exec arc-sandbox",
+    "repl": "NODE_ENV=testing AWS_PROFILE=default AWS_REGION=us-east-1 arc-repl",
+    "dns": "AWS_PROFILE=default AWS_REGION=us-east-1 arc-dns",
+    "test": "NODE_ENV=testing AWS_PROFILE=default AWS_REGION=us-east-1 tape test/*-test.js | tap-spec"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@architect/data": "^2.0.2",
+    "@architect/workflows": "^3.1.19",
+    "nodemon": "^1.17.5"
+  },
+  "devDependencies": {
+    "run-parallel": "^1.1.9",
+    "run-waterfall": "^1.1.6",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.9.1"
+  }
+}

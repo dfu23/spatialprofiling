@@ -1,0 +1,8 @@
+{
+  "name": "spatial-get-login",
+  "dependencies": {
+    "@architect/data": "^2.0.2",
+    "@architect/functions": "^1.8.10",
+    "arc-middleware-github-oauth": "^1.0.0"
+  }
+}
